@@ -26,10 +26,10 @@ export function Footer() {
             <ul className="mt-4 space-y-2 font-body text-sm text-[var(--color-text-secondary)]">
               <li>
                 <a
-                  href="mailto:hello@studio27.co"
+                  href="mailto:connect@studio27.site"
                   className="transition-colors hover:text-[var(--color-accent)]"
                 >
-                  hello@studio27.co
+                  connect@studio27.site
                 </a>
               </li>
               <li>

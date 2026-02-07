@@ -37,10 +37,10 @@ export default function ContactPage() {
                   Email
                 </h3>
                 <a
-                  href="mailto:hello@studio27.co"
+                  href="mailto:connect@studio27.site"
                   className="mt-2 block font-body text-lg text-[var(--color-text-primary)] transition-colors hover:text-[var(--color-accent)]"
                 >
-                  hello@studio27.co
+                  connect@studio27.site
                 </a>
               </div>
 
