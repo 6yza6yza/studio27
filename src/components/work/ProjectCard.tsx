@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Project } from "@/data/projects";
 import { CurtainReveal } from "@/components/ui/CurtainReveal";
 import { MagneticElement } from "@/components/ui/MagneticElement";
+import { ProgressiveImage } from "@/components/ui/ProgressiveImage";
 
 interface ProjectCardProps {
   project: Project;
@@ -22,11 +22,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <CurtainReveal delay={index * 0.15} direction="left">
           <div className="relative aspect-[3/2] overflow-hidden">
             {project.heroImage ? (
-              <Image
+              <ProgressiveImage
                 src={project.heroImage}
                 alt={project.name}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             ) : (

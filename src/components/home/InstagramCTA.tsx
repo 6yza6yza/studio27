@@ -1,9 +1,18 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { ProgressiveImage } from "@/components/ui/ProgressiveImage";
+import { projects } from "@/data/projects";
+import Link from "next/link";
 
 export function InstagramCTA() {
-  // 6 placeholder Instagram squares
-  const instagramPosts = Array.from({ length: 6 }, (_, i) => i + 1);
+  // Get 6 different project images for the grid
+  const projectImages = [
+    { src: projects[0].heroImage!, slug: projects[0].slug, name: projects[0].name },
+    { src: projects[1].heroImage!, slug: projects[1].slug, name: projects[1].name },
+    { src: projects[2].heroImage!, slug: projects[2].slug, name: projects[2].name },
+    { src: projects[3].heroImage!, slug: projects[3].slug, name: projects[3].name },
+    { src: projects[4].heroImage!, slug: projects[4].slug, name: projects[4].name },
+    { src: projects[5].heroImage!, slug: projects[5].slug, name: projects[5].name },
+  ];
 
   return (
     <section className="content-auto bg-[var(--color-bg-primary)] py-24 md:py-32">
@@ -25,23 +34,23 @@ export function InstagramCTA() {
           </div>
         </ScrollReveal>
 
-        {/* Instagram grid */}
+        {/* Project grid */}
         <ScrollReveal delay={0.2}>
           <div className="grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-4">
-            {instagramPosts.map((post) => (
-              <a
-                key={post}
-                href="https://instagram.com/studio27____"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group aspect-square overflow-hidden"
+            {projectImages.map((project, index) => (
+              <Link
+                key={index}
+                href={`/work/${project.slug}`}
+                className="group relative aspect-square overflow-hidden"
               >
-                <ImagePlaceholder
-                  label={`Post ${post}`}
-                  aspectRatio="1/1"
-                  className="h-full w-full transition-transform duration-500 group-hover:scale-110"
+                <ProgressiveImage
+                  src={project.src}
+                  alt={project.name}
+                  fill
+                  sizes="(max-width: 768px) 33vw, 16vw"
+                  className="transition-transform duration-500 group-hover:scale-110"
                 />
-              </a>
+              </Link>
             ))}
           </div>
         </ScrollReveal>

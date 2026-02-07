@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { SplitText } from "@/components/ui/SplitText";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { ApproachCard } from "@/components/about/ApproachCard";
 
 export const metadata: Metadata = {
@@ -64,40 +63,28 @@ export default function AboutPage() {
           </p>
         </ScrollReveal>
 
-        {/* Two column section */}
-        <div className="mt-16 grid gap-12 md:mt-24 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
-          {/* Left: Philosophy */}
-          <ScrollReveal>
-            <div className="space-y-6">
-              <p className="font-body text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
-                Founded in 2018, Studio 27 has grown from a small practice into one of
-                Kosovo&apos;s most recognized design studios. Our work spans residential
-                interiors, commercial spaces, cafés, offices, and increasingly, full
-                architectural projects.
-              </p>
-              <p className="font-body text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
-                We believe in the power of warm materials — oak, terracotta, natural stone
-                — combined with clean, precise lines. Our spaces are designed to feel
-                immediately welcoming while revealing their depth over time. Every detail
-                is intentional, every material chosen for how it will age.
-              </p>
-              <p className="font-body text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
-                Our approach is collaborative. We work closely with clients, craftspeople,
-                and suppliers to ensure every project reflects both our design philosophy
-                and the unique needs of those who will inhabit the space.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Right: Image */}
-          <ScrollReveal delay={0.2}>
-            <ImagePlaceholder
-              label="Studio Portrait"
-              aspectRatio="4/5"
-              className="w-full"
-            />
-          </ScrollReveal>
-        </div>
+        {/* Philosophy section */}
+        <ScrollReveal>
+          <div className="mt-16 max-w-3xl space-y-6 md:mt-24">
+            <p className="font-body text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
+              Founded in 2018, Studio 27 has grown from a small practice into one of
+              Kosovo&apos;s most recognized design studios. Our work spans residential
+              interiors, commercial spaces, cafés, offices, and increasingly, full
+              architectural projects.
+            </p>
+            <p className="font-body text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
+              We believe in the power of warm materials — oak, terracotta, natural stone
+              — combined with clean, precise lines. Our spaces are designed to feel
+              immediately welcoming while revealing their depth over time. Every detail
+              is intentional, every material chosen for how it will age.
+            </p>
+            <p className="font-body text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
+              Our approach is collaborative. We work closely with clients, craftspeople,
+              and suppliers to ensure every project reflects both our design philosophy
+              and the unique needs of those who will inhabit the space.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Approach section */}
         <div className="mt-24 md:mt-32">

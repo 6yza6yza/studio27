@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function ThemeToggle() {
     return <div className="h-6 w-6" />;
   }
 
-  const isDark = theme === "dark";
+  const isDark = resolvedTheme === "dark";
 
   return (
     <button

@@ -2,9 +2,9 @@
 
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
 import { Project } from "@/data/projects";
+import { ProgressiveImage } from "@/components/ui/ProgressiveImage";
 
 interface HeroCarouselProps {
   projects: Project[];
@@ -63,11 +63,9 @@ export function HeroCarousel({ projects }: HeroCarouselProps) {
             {/* Background image */}
             <div className="absolute inset-0">
               {project.heroImage ? (
-                <Image
+                <ProgressiveImage
                   src={project.heroImage}
                   alt={project.name}
-                  fill
-                  className="object-cover"
                   priority={index === 0}
                   sizes="100vw"
                 />

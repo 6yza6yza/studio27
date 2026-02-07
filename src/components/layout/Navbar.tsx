@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { ThemeToggle } from "./ThemeToggle";
@@ -48,9 +49,16 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-body text-sm font-bold uppercase tracking-[0.2em] text-[var(--color-text-primary)] transition-colors hover:text-[var(--color-accent)]"
+            className="relative block h-12 w-40 transition-opacity hover:opacity-70"
           >
-            Studio 27
+            <Image
+              src="/images/logo.svg"
+              alt="Studio 27"
+              fill
+              className="object-contain"
+              priority
+              unoptimized
+            />
           </Link>
 
           {/* Desktop Navigation */}

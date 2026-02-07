@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { ImageReveal } from "@/components/ui/ImageReveal";
+import { ProgressiveImage } from "@/components/ui/ProgressiveImage";
 
 interface ProjectGalleryProps {
   projectName: string;
@@ -34,11 +34,9 @@ export function ProjectGallery({ projectName, galleryImages, galleryCount }: Pro
             <ImageReveal key={image.id} delay={0}>
               <div className="relative aspect-video overflow-hidden">
                 {image.src ? (
-                  <Image
+                  <ProgressiveImage
                     src={image.src}
                     alt={`${projectName} - Image ${image.id}`}
-                    fill
-                    className="object-cover"
                     sizes="100vw"
                     loading={shouldLoadEager ? "eager" : "lazy"}
                     priority={index === 0}
@@ -66,11 +64,9 @@ export function ProjectGallery({ projectName, galleryImages, galleryCount }: Pro
               <ImageReveal delay={0}>
                 <div className="relative aspect-[4/5] overflow-hidden">
                   {image.src ? (
-                    <Image
+                    <ProgressiveImage
                       src={image.src}
                       alt={`${projectName} - Image ${image.id}`}
-                      fill
-                      className="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       loading={shouldLoadEager ? "eager" : "lazy"}
                     />
@@ -88,11 +84,9 @@ export function ProjectGallery({ projectName, galleryImages, galleryCount }: Pro
                 <ImageReveal delay={0.1}>
                   <div className="relative aspect-[4/5] overflow-hidden">
                     {nextImage.src ? (
-                      <Image
+                      <ProgressiveImage
                         src={nextImage.src}
                         alt={`${projectName} - Image ${nextImage.id}`}
-                        fill
-                        className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         loading={shouldLoadEager ? "eager" : "lazy"}
                       />

@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
 import { Project } from "@/data/projects";
+import { ProgressiveImage } from "@/components/ui/ProgressiveImage";
 import { SplitText } from "@/components/ui/SplitText";
 import { CurtainReveal } from "@/components/ui/CurtainReveal";
 import { MagneticElement } from "@/components/ui/MagneticElement";
@@ -40,11 +40,10 @@ export function SelectedWork({ projects }: SelectedWorkProps) {
                   <CurtainReveal delay={index * 0.15} direction="left">
                     <div className={`relative overflow-hidden ${isLarge ? "aspect-[4/3]" : "aspect-[3/2]"}`}>
                       {project.heroImage ? (
-                        <Image
+                        <ProgressiveImage
                           src={project.heroImage}
                           alt={project.name}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          className="transition-transform duration-700 group-hover:scale-105"
                           sizes="(max-width: 768px) 100vw, 50vw"
                         />
                       ) : (

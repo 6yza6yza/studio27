@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { projects, getProjectBySlug, getAdjacentProjects } from "@/data/projects";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ProjectGallery } from "@/components/work/ProjectGallery";
+import { ProgressiveImage } from "@/components/ui/ProgressiveImage";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -47,11 +47,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {/* Hero image */}
       <div className="relative h-[60vh] w-full md:h-[80vh]">
         {project.heroImage ? (
-          <Image
+          <ProgressiveImage
             src={project.heroImage}
             alt={project.name}
-            fill
-            className="object-cover"
             priority
             sizes="100vw"
           />
