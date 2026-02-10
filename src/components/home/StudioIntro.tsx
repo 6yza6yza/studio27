@@ -7,7 +7,7 @@ export function StudioIntro() {
         {/* Intro text - full width */}
         <ScrollReveal>
           <p className="max-w-4xl font-body text-xl leading-relaxed text-[var(--color-text-primary)] md:text-2xl lg:text-[28px] lg:leading-[1.6]">
-            Studio 27 is an architecture and interior design studio in Prishtina, Kosovo.
+            Studio 27 is an award-winning architecture and interior design studio based in Prishtina, Kosovo.
             We design spaces that blend warm materials, clean lines, and handcrafted details —
             built to age beautifully.
           </p>
