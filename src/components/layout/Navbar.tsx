@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Logo } from "@/components/ui/Logo";
 import { motion } from "motion/react";
 import { ThemeToggle } from "./ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
@@ -49,16 +49,9 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="relative block h-14 w-48 transition-opacity hover:opacity-70"
+            className="block h-14 w-48 transition-opacity hover:opacity-70"
           >
-            <Image
-              src="/images/logo.svg"
-              alt="Studio 27"
-              fill
-              className="object-contain"
-              priority
-              unoptimized
-            />
+            <Logo className="h-full w-full" />
           </Link>
 
           {/* Desktop Navigation */}
