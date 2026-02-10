@@ -36,12 +36,6 @@ const approach = [
   },
 ];
 
-const collaborators = [
-  { name: "Agron Istra", role: "Photography", handle: "agronistra" },
-  { name: "Supercut Studio", role: "Photography", handle: "supercutstudio" },
-  { name: "Agimi Company", role: "Tiles & Materials", handle: "agimicompany" },
-];
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[var(--color-bg-primary)] pt-32 md:pt-40">
@@ -102,37 +96,6 @@ export default function AboutPage() {
                   title={item.title}
                   description={item.description}
                 />
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-
-        {/* Collaborators section */}
-        <div className="mt-24 border-t border-[var(--color-border)] pt-16 md:mt-32 md:pt-24">
-          <ScrollReveal>
-            <h2 className="mb-8 font-mono text-xs uppercase tracking-wider text-[var(--color-text-muted)]">
-              Collaborators
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {collaborators.map((collab, index) => (
-              <ScrollReveal key={collab.name} delay={index * 0.1}>
-                <div className="font-body text-sm">
-                  <span className="text-[var(--color-text-primary)]">{collab.name}</span>
-                  <span className="mx-2 text-[var(--color-text-muted)]">·</span>
-                  <span className="text-[var(--color-text-secondary)]">{collab.role}</span>
-                  {collab.handle && (
-                    <a
-                      href={`https://instagram.com/${collab.handle}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="ml-2 text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
-                    >
-                      @{collab.handle}
-                    </a>
-                  )}
-                </div>
               </ScrollReveal>
             ))}
           </div>

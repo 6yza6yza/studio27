@@ -140,51 +140,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   </p>
                 </div>
 
-                {project.photographer && (
-                  <div>
-                    <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-accent)]">
-                      Photography
-                    </span>
-                    <p className="mt-1 font-body text-sm text-[var(--color-text-primary)]">
-                      {project.photographer}
-                      {project.photographerHandle && (
-                        <a
-                          href={`https://instagram.com/${project.photographerHandle}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="ml-1 text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
-                        >
-                          @{project.photographerHandle}
-                        </a>
-                      )}
-                    </p>
-                  </div>
-                )}
-
-                {project.collaborators && project.collaborators.length > 0 && (
-                  <div>
-                    <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-accent)]">
-                      Collaborators
-                    </span>
-                    <div className="mt-1 space-y-1">
-                      {project.collaborators.map((collab, index) => (
-                        <p key={index} className="font-body text-sm text-[var(--color-text-primary)]">
-                          {collab.name}
-                          {collab.handle && (
-                            <a
-                              href={`https://instagram.com/${collab.handle}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="ml-1 text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
-                            >
-                              @{collab.handle}
-                            </a>
-                          )}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </ScrollReveal>
