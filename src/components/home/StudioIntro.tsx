@@ -17,7 +17,7 @@ export function StudioIntro() {
         <ScrollReveal delay={0.2}>
           <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-[var(--color-border)] pt-8 md:mt-24 md:flex-row md:items-center md:gap-0 md:pt-12">
             <div className="flex items-center gap-4">
-              <span className="font-mono text-sm text-[var(--color-text-secondary)]">2018</span>
+              <span className="font-mono text-sm text-[var(--color-text-secondary)]">2019</span>
               <span className="h-4 w-[1px] bg-[var(--color-accent)]" />
               <span className="font-body text-sm text-[var(--color-text-muted)]">Founded</span>
             </div>

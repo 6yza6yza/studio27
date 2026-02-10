@@ -67,7 +67,7 @@ export default function AboutPage() {
         <ScrollReveal>
           <div className="mt-16 max-w-3xl space-y-6 md:mt-24">
             <p className="font-body text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
-              Founded in 2018, Studio 27 has grown from a small practice into one of
+              Founded in 2019, Studio 27 has grown from a small practice into one of
               Kosovo&apos;s most recognized design studios. Our work spans residential
               interiors, commercial spaces, cafés, offices, and increasingly, full
               architectural projects.

@@ -49,7 +49,7 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="relative block h-12 w-40 transition-opacity hover:opacity-70"
+            className="relative block h-14 w-48 transition-opacity hover:opacity-70"
           >
             <Image
               src="/images/logo.svg"
