@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -84,6 +85,7 @@ export default function RootLayout({
             </div>
           </LenisProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
